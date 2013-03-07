@@ -1,0 +1,13 @@
+{
+  "name": "eor",
+  "description": "The EOR game infomator",
+  "author": "Joshua Galvin",
+  "version": "0.0.1",
+  "devDependencies": {
+    "express": "",
+    "rimraf": "",
+    "wrench": "",
+    "mkdirp": "",
+    "cakehelper": ""
+  }
+}

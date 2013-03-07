@@ -1,0 +1,52 @@
+vendor(prop, args)
+  -webkit-{prop} args
+  {prop} args
+
+flexe = -webkit-flex
+align-self()
+  -webkit-align-self arguments
+align-items()
+  -webkit-align-items arguments
+flex() 
+  -webkit-flex arguments
+flex-direction() 
+  -webkit-flex-direction arguments
+transition()
+  -webkit-transition arguments
+order() 
+  -webkit-order arguments
+transform()
+  -webkit-transform arguments
+transform-style()
+  -webkit-transform-style arguments
+user-select()
+  -webkit-user-select arguments
+  user-select arguments
+
+.character
+  display flexe
+  align-items flex-end
+
+  .chat 
+    width 400px
+    height 200px
+    font-size 1.5em
+    background-color white
+    border 8px solid black
+    border-radius 15px
+    padding 5px
+    font-family 'Graduate'
+    .cursor
+      -webkit-animation cursorblink .5s infinite
+
+#viera.character
+  .avatar 
+    background-image url(../images/viera.png)
+    width 208px
+    height 434px
+
+
+@-webkit-keyframes cursorblink
+  0% {opacity: 1}
+  50% {opacity: 0}
+  100% {opacity: 1}
