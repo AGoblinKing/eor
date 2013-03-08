@@ -12,6 +12,8 @@ define ["lib/jquery"], () ->
         exports: "$"
       "jade":
         exports: "jade"
+      "speakClient":
+        exports: "speak"
       "underscore":
         exports: "_"
 

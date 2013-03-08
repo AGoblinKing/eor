@@ -1,15 +1,21 @@
 define "eor", [
   "backbone" 
-  "./views/character"
-  "./models/character"
-], (Backbone, CharacterView, Character) ->
+  "./views/main"
+  "./views/title"
+  "./views/bahamut"
+], (Backbone, MainView, TitleView, BahamutView) ->
   class AppRouter extends Backbone.Router
     routes: 
       "": "default"
+      ":page": "default"
 
-    default: ->
-      cModel = new Character()
-      $("body").html (new CharacterView model: cModel).render().el
+    makePage: ->
+      $("body").html (new MainView).render().el
+
+    default: (page) ->
+      @makePage()
+      $("#scene").html (new TitleView).render().el
+      $("#scene").append (new BahamutView).render().el
 
   new AppRouter()
 
