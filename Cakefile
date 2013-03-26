@@ -1,7 +1,3 @@
-path = require "path"
-{exec} = require "child_process"
-rimraf = require "rimraf"
-mkdirp = require "mkdirp"
 CakeHelper = require "cakehelper"
 express = require "express"
 
@@ -67,12 +63,3 @@ task "run", "Run a webserver and watch", ->
   app.use express.static "#{__dirname}/public"
   app.listen port
   console.log "App running on port #{port}"
-
-fs = require "fs"
-child_process = require "child_process"
-
-run_from_here = (command, callback) ->
-  cwd = path.normalize __dirname
-  child_process.exec command, { cwd: cwd }, (error, stdout, stderr) ->
-    console.log command
-    callback error, stdout, stderr
